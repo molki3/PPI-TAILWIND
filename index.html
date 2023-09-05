@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEncrypter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-300 dark:bg-gray-800">
+    <main class=" flex flex-col md:flex-row">
+        <div class="w-full md:w-1/2 md:h-screen bg-gray-600 flex flex-cols">
+            <textarea id="main-field" class="p-20 w-full h-screen mx-auto bg-gray-300 text-3xl text-center" placeholder="Type here..." name="" cols="30" rows="10"></textarea>
+            <div class="flex fixed md:absolute md:w-1/2 w-3/4 bottom-0 left-0">
+                <button class="w-1/2 p-3 my-5 md:m-5 bg-blue-700 text-white font-semibold rounded-full" onclick="encrypt()">Encrypt Text</button>
+                <button class="w-1/2 p-3 my-5 md:m-5 bg-blue-700 text-white font-semibold rounded-full" onclick="decrypted()">Decrypt Text</button>
+            </div>
+        </div>
+        <div class="w-full md:w-1/2 h-screen bg-gray-600 flex flex-cols">
+            <textarea id="result-field" class="p-20 w-full h-screen mx-auto bg-gray-800 text-3xl text-gray-100 text-center" name="" id="" cols="30" rows="10" placeholder="This text will be encrypted or decrypted" disabled></textarea>
+            <div class="flex fixed md:absolute md:w-1/2 w-1/4 bottom-0 right-0">
+                <button class="w-full md:w-1/4 p-3 m-5 bg-red-700 text-white font-semibold rounded-full mx-auto" onclick="cls()">Clear</button>
+           </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
